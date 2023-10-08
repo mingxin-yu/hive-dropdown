@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dropdown from './Dropdown';
+import Dropdown from './dropdown.js';
 
 function SingleSelectExample() {
     const options = ['Option 1', 'Option 2', 'Option 3'];
