@@ -46,15 +46,6 @@ function Dropdown({ isDisabled, hasWarning, isMultiSelect, selectedOptions, opti
   const renderOptions = () => {
     return (
         <ul className="dropdown-list">
-          {isMultiSelect && selectedOptions.length > 0 && (
-              <li
-                  key="Clear All"
-                  onClick={() => handleOptionClick('Clear All')}
-                  className="clear-all"
-              >
-                Clear All
-              </li>
-          )}
           {isMultiSelect && (
               <li
                   key="Select All"
@@ -73,6 +64,15 @@ function Dropdown({ isDisabled, hasWarning, isMultiSelect, selectedOptions, opti
                 {option}
               </li>
           ))}
+          {isMultiSelect && selectedOptions.length > 0 && (
+              <li
+                  key="Clear All"
+                  onClick={() => handleOptionClick('Clear All')}
+                  className="clear-all"
+              >
+                Clear All
+              </li>
+          )}
         </ul>
     );
   };
