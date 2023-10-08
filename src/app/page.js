@@ -19,6 +19,13 @@ export default function Home() {
         <WarningExample />
         <DisableExample />
         <LotsOptionsExample />
+        <div className="h1 mt-16">
+            Possible improvement for this project:
+        </div>
+          <div>
+            <div>1. I didn't implement any hover effects, but I can add them if requested. </div>
+            <div>2. If the options input is too long (e.g., 100 or more options), it would be beneficial to implement lazy loading and search functionality for the list section.</div>
+        </div>
       </div>
     )
 }
