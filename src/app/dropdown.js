@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-function Dropdown({ isDisabled, hasWarning, isMultiSelect, selectedOptions, options, onOptionChange }) {
+function Dropdown({ isDisabled, hasWarning, isMultiSelect, selectedOptions, options, onOptionChange, label }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const toggleDropdown = () => {
     if (!isDisabled) {
@@ -77,11 +78,20 @@ function Dropdown({ isDisabled, hasWarning, isMultiSelect, selectedOptions, opti
   };
 
   return (
-      <div className={`dropdown ${isDisabled ? 'disabled' : ''} ${hasWarning ? 'warning' : ''}`}>
+      <div
+          className={`dropdown ${isDisabled ? 'disabled' : ''} ${isHovered ? 'hovered' : ''}`}
+          onMouseEnter={toggleDropdown}
+          onMouseLeave={toggleDropdown}
+      >
         <div
-            className={`dropdown-header ${isOpen ? 'open' : ''}`}
+            className={`dropdown-label ${isOpen ? 'open' : ''} ${hasWarning ? 'warning' : ''}`}
             onClick={toggleDropdown}
-            onMouseEnter={toggleDropdown}
+        >
+          {label}
+        </div>
+        <div
+            className={`dropdown-header ${isOpen ? 'open' : ''} ${hasWarning ? 'warning' : ''}`}
+            onClick={toggleDropdown}
         >
           {headerText}
         </div>
