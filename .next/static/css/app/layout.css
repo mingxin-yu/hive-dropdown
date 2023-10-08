@@ -656,5 +656,7 @@ body {
   border-radius: 8px;
   margin-top: 4px;
   margin-bottom: 4px;
+  max-height: 174px;
+  overflow: scroll;
 }
 

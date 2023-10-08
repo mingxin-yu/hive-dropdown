@@ -6,6 +6,7 @@ import SingleSelectExample from "./singleSelectExample";
 import MultiSelectExample from "./mutiSelectExample"
 import DisableExample from "./disableExample"
 import WarningExample from "./warningExample"
+import LotsOptionsExample from "./LotsOptionsExample";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
         <MultiSelectExample />
         <WarningExample />
         <DisableExample />
+        <LotsOptionsExample />
       </div>
     )
 }
